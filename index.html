@@ -4,18 +4,27 @@
 	<meta charset="UTF-8">
 	<title>Maps Project</title>
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
 </head>
 <body>
-	<div id="map"></div>
-	<div class="listings">
-		<ul>
-			<li data-bind="click: whenClicked"></li>
-		</ul>
+	<h1>Malibu Map</h1>
+	<div class="content">
+		<div id="map"></div>
+		<div class="listings">
+			<select class= "selection" data-bind="options: options, value: 'selectedType', optionsText: 'type' ">
+			</select>
+			<ul class="locations" data-bind="filteredAction">
+				<div data-bind= "foreach: markersList">
+					<li data-bind="text: title, click: $parent.listOpenWindow"></li>
+				</div>
+			</ul>
+		</div>
 	</div>
-
-	<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places&key=AIzaSyBGDBIkgd4oCuritFNT5LXIhl5Fa9yu_fo&callback=initMap"></script>
-	<script type='text/javascript' src='js/lib/knockout-3.4.2.js'></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?libraries=places,geometry&key=AIzaSyBGDBIkgd4oCuritFNT5LXIhl5Fa9yu_fo&callback=initMap"></script>
+	<script type='text/javascript' src='js/lib/jQuery.js'></script>
 	<script type='text/javascript' src="js/app.js"></script>
+	<script type='text/javascript' src='js/lib/knockout-3.4.2.js'></script>
+	
    	
 	
 	

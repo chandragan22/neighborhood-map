@@ -1,32 +1,47 @@
 html, body {
-	display: flex;
 	height: 100%;
 	width: 100%;
 	margin: 0;
 	padding: 0;
+	font-family: 'Muli', sans-serif;
+}
+
+h1 {
+	width: 100%;
+	text-align: center;
+	background-color: #aacbff;
+	margin: 0;
+	margin-bottom: 12px;
+	padding: 20px;
+	box-shadow: 0px 0px 5px 5px #d0d6e0;
 }
 
 #map {
-	display: flex;
-	height: 100%;
-	width: 100%;
-	order: 2;
+	height: 600px;
+	width: 80%;
+	float: right;
 }
 
 .listings {
-	width: 30%;
-	display: flex;
-	order: 1;
-	height: 20%;
-	margin: 30px;
-}
-
-.options {
-	width: 100%;
+	width: 20%;
+	float: left;
 	height: 100%;
+	margin: 0;
 }
 
-.each {
-	width: 100%;
-	margin: 0;
+li {
+	list-style-type: none;
+	margin: 0px;
+	padding-bottom: 5px;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #495468;
+}
+
+li:hover {
+	
+}
+
+ul {
+	padding: 0;
 }
